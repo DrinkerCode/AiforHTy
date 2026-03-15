@@ -61,6 +61,17 @@
             <el-icon><Location /></el-icon>
             <span>发射场分布</span>
           </el-menu-item>
+          
+          <el-divider border-style="dashed" />
+          
+          <el-sub-menu index="admin">
+            <template #title>
+              <el-icon><Setting /></el-icon>
+              <span>数据管理</span>
+            </template>
+            <el-menu-item index="/admin/launches">发射记录管理</el-menu-item>
+            <el-menu-item index="/admin/satellites">卫星数据管理</el-menu-item>
+          </el-sub-menu>
         </el-menu>
       </el-aside>
       

@@ -55,6 +55,17 @@ const routes = [
     path: '/launch-sites',
     name: 'LaunchSites',
     component: () => import('@/views/LaunchSitesView.vue')
+  },
+  // 管理系统路由
+  {
+    path: '/admin/launches',
+    name: 'LaunchManagement',
+    component: () => import('@/views/admin/LaunchManagement.vue')
+  },
+  {
+    path: '/admin/satellites',
+    name: 'SatelliteManagement',
+    component: () => import('@/views/admin/SatelliteManagement.vue')
   }
 ]
 
