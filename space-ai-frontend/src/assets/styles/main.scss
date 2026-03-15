@@ -1,0 +1,179 @@
+// 复古航天蓝主题配色
+:root {
+  // 主色调 - 复古航天蓝
+  --space-blue-dark: #0d1821;
+  --space-blue-primary: #1a2332;
+  --space-blue-medium: #2a3544;
+  --space-blue-light: #3d4c5f;
+  
+  // 强调色
+  --accent-cyan: #4fc3f7;
+  --accent-blue: #29b6f6;
+  --accent-gold: #ffb74d;
+  --accent-silver: #cfd8dc;
+  
+  // 文字颜色
+  --text-primary: #e0e6ed;
+  --text-secondary: #b8c5d6;
+  --text-muted: #78909c;
+  
+  // 背景色
+  --bg-dark: #0d1821;
+  --bg-card: #1a2332;
+  --bg-hover: #2a3544;
+  
+  // 边框
+  --border-color: #2a3544;
+  
+  // 成功/警告/错误
+  --success: #81c784;
+  --warning: #ffb74d;
+  --error: #e57373;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--space-blue-primary) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--space-blue-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--space-blue-light);
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--accent-cyan);
+  }
+}
+
+// 卡片通用样式
+.space-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+// ECharts 容器
+.echart-container {
+  width: 100%;
+  height: 500px;
+}
+
+// Element Plus 覆盖样式
+.el-menu {
+  &.el-menu--vertical {
+    .el-menu-item {
+      &:hover {
+        background-color: var(--bg-hover) !important;
+      }
+      
+      &.is-active {
+        background-color: rgba(79, 195, 247, 0.15) !important;
+        color: var(--accent-cyan) !important;
+      }
+    }
+    
+    .el-sub-menu__title {
+      &:hover {
+        background-color: var(--bg-hover) !important;
+      }
+    }
+  }
+}
+
+.el-card {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  
+  .el-card__header {
+    border-bottom-color: var(--border-color) !important;
+    background-color: var(--space-blue-medium) !important;
+  }
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--accent-cyan);
+  --el-button-border-color: var(--accent-cyan);
+  --el-button-hover-bg-color: var(--accent-blue);
+  --el-button-hover-border-color: var(--accent-blue);
+}
+
+.el-input__wrapper {
+  background-color: var(--space-blue-medium) !important;
+  box-shadow: 0 0 0 1px var(--border-color) inset !important;
+  
+  .el-input__inner {
+    color: var(--text-primary) !important;
+  }
+}
+
+.el-message {
+  --el-message-bg-color: var(--space-blue-medium);
+  --el-message-border-color: var(--border-color);
+}
+
+// 动画
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+// 响应式
+@media (max-width: 768px) {
+  .el-aside {
+    width: 64px !important;
+    
+    .logo span {
+      display: none;
+    }
+    
+    .el-menu-item span,
+    .el-sub-menu__title span {
+      display: none;
+    }
+  }
+}

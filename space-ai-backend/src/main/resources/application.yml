@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: space-ai-backend
+  
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+
+# 阿里云大模型配置
+aliyun:
+  api-key: ${ALIYUN_API_KEY:your-api-key-here}
+  api-endpoint: https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation
+  model: qwen-max
+  
+# 跨域配置
+cors:
+  allowed-origins: http://localhost:5173,http://localhost:3000
+
+logging:
+  level:
+    com.space.ai: DEBUG
+    org.springframework.web: INFO
