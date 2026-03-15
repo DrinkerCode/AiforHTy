@@ -1,74 +1,40 @@
 ```
-# Dependencies
-node_modules/
+# Compiled and build artifacts
+*.class
+*.o
+*.obj
+*.out
 target/
+build/
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
+# Dependencies
+.m2/
+.gradle/
+node_modules/
 
-# Logs
+# Logs and temp files
 *.log
+*.tmp
+*.swp
 
 # Environment
 .env
 .env.local
 *.env.*
 
-# OS files
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific
 .DS_Store
 Thumbs.db
 
-# Build artifacts
-dist/
-build/
-*.jar
-*.war
-*.class
-*.pyc
-__pycache__/
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Python specific
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage*
-.nox/
-.pytest_cache/
-.mypy_cache/
-.hypothesis/
-
-# Node.js specific
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-node_modules/
-dist/
-build/
-*.min.js
-*.min.css
-
 # Java specific
-*.class
 *.jar
 *.war
 *.ear
-*.tar.gz
-target/
-!target/README
-.DS_Store
+!*.jar # Keep jar files that are intentionally committed
 ```
